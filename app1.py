@@ -16,6 +16,7 @@ import numpy as np
 
 # Load model and scaler
 model = joblib.load("model1.pkl")
+scaler = joblib.load("scaler.pkl")
 
 
 st.set_page_config(page_title="insurance", page_icon="🛡️")
