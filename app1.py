@@ -47,7 +47,11 @@ if st.button("Predict charges"):
 
 
     # Predict
-    prediction = model.predict(input_data)
+    input_scaled = scaler.transform(input_data)
+
+    # Predict
+    prediction = model.predict(input_scaled)
+
 
     # Display Result
     st.success(f"🟢 Predicted Charges: {prediction[0]:,.2f}")
